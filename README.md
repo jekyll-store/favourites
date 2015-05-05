@@ -1,4 +1,4 @@
-# Jekll-Store/Favourites
+# Jekyll-Store/Favourites
 
 [![Build Status](https://travis-ci.org/jekyll-store/favourites.svg?branch=master)](https://travis-ci.org/jekyll-store/favourites)
 
