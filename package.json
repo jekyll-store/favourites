@@ -1,7 +1,7 @@
 {
   "name": "jekyll-store-favourites",
   "main": "./src/JekyllStoreFavourites.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Favourite products/wish list plugin for Jekyll-Store Engine",
   "repository": {
     "type": "git",
@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "big.js": "^3.0.1",
-    "immutable": "^3.6.4",
-    "reflux": "^0.2.7"
+    "reflux": "^0.2.7",
+    "seamless-immutable": "^2.3.2"
   },
   "devDependencies": {
     "chai": "^2.1.2",
@@ -18,7 +18,7 @@
     "sinon": "^1.14.1"
   },
   "peerDependencies": {
-    "jekyll-store-engine": ">=0.1.2"
+    "jekyll-store-engine": ">=0.2.0"
   },
   "scripts": {
     "test": "mocha"
