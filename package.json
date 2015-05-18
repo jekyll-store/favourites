@@ -1,7 +1,7 @@
 {
   "name": "jekyll-store-favourites",
   "main": "./src/JekyllStoreFavourites.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Favourite products/wish list plugin for Jekyll-Store Engine",
   "repository": {
     "type": "git",

@@ -6,17 +6,15 @@ var s = require('../src/FavouritesStore');
 describe('FavouritesStore', function() {
   before(function() {
     s.update = sinon.spy();
-    s.favourites = I([{ name: 'wallet' }, { name: 'coat' }]);
-    s.products = I({
-      'wallet': { name: 'wallet' },
+    s.favourites = I({ 'wallet': { name: 'wallet' }, 'coat': { name: 'coat' } });
+    s.products = s.favourites.merge({
       'glove': { name: 'glove' },
-      'tie': { name: 'tie' },
-      'coat': { name: 'coat' }
+      'tie': { name: 'tie' }
     });
   });
 
   it('adds to favourites', function() {
-    var expected = I([{ name: 'wallet' }, { name: 'coat' }, { name: 'tie' }]);
+    var expected = s.products.without('glove');
     s.onFavourite({ name: 'tie' });
     assert(s.update.called);
     assert.deepEqual(s.favourites, expected)
@@ -29,7 +27,7 @@ describe('FavouritesStore', function() {
   });
 
   it('removes from favourites', function() {
-    var expected = I([{ name: 'wallet' }, { name: 'tie' }]);
+    var expected = s.products.without('glove').without('coat');
     s.onRemoveFromFavourites({ name: 'coat' });
     assert(s.update.called);
     assert.deepEqual(s.favourites, expected)

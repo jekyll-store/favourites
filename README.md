@@ -42,11 +42,11 @@ Example output:
 
 ```javascript
 {
-  favourites: Immutable([
-    { name: 'Jumper', price: 24.30 }),
-    { name: 'Cardigan', price: 21.45 }),
-    { name: 'Pullover', price: 13.90 })
-  ])
+  favourites: Immutable({
+    'Jumper': { name: 'Jumper', price: 24.30 },
+    'Cardigan': { name: 'Cardigan', price: 21.45 },
+    'Pullover': { name: 'Pullover', price: 13.90 }
+  })
 }
 ```
 
